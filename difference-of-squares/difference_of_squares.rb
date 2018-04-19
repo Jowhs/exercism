@@ -7,13 +7,11 @@ class Squares
     end
 
     def square_of_sum
-        sq_sm = numbers.inject {|total, n| total + n}
-        return sq_sm**2
+        numbers.inject {|total, n| total + n} ** 2
     end
 
     def sum_of_squares
-        sm_sq = numbers.map {|n| n**2}.inject(0, &:+)
-        return sm_sq
+        numbers.map {|n| n**2}.inject(0, &:+)
     end
 
     def difference

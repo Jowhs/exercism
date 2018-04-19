@@ -10,7 +10,7 @@ class Sieve
         (2..num).each do |i|
             primes.reject!{ |j| j % i == 0 && j > i }
         end
-        return primes  
+        primes  
     end
 end
 

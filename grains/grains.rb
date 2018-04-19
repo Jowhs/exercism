@@ -2,10 +2,8 @@ class Grains
 
   def self.square(num)
     raise ArgumentError unless num.between?(1, 64)
-    chess_board = []
-    (0..63).map { |n| chess_board << 2 ** n }
-    num -= 1
-    chess_board[num]
+    chess_board = (0..num).map { |n| 2 ** n }
+    chess_board[num - 1]
   end
 
   def self.total
